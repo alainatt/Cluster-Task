@@ -6,10 +6,8 @@ args <- commandArgs(trailingOnly = FALSE)
 file_arg <- grep("^--file=", args, value = TRUE)
 
 if (length(file_arg) > 0) {
-  # When run with Rscript
   script_dir <- dirname(normalizePath(sub("^--file=", "", file_arg)))
 } else {
-  # When run interactively (e.g., in RStudio)
   script_dir <- getwd()
 }
 
